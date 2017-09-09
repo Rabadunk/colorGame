@@ -37,6 +37,8 @@ function init(){
 				resetColors(numSquares, clickedColor);
 			}
 			else{
+				audioFail.pause();
+				audioFail.currentTime = 0;
 				audioFail.play();
 				this.style.backgroundColor = "#232323"
 				messageDisplay.textContent = "Try Again"
@@ -63,6 +65,9 @@ function modeSwitch(){
 	resetColors(numSquares, "#232323");
 	reset.textContent = "New Colors";
 	messageDisplay.textContent = "";
+	//reset sounds
+	audioSuccess.pause();
+	audioSuccess.currentTime = 0;
 	//change colors of squares
 	for(var i = 0; i < squares.length; i++){
 		squares[i].style.backgroundColor = colors[i];
