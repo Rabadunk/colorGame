@@ -68,6 +68,8 @@ function modeSwitch(){
 	//reset sounds
 	audioSuccess.pause();
 	audioSuccess.currentTime = 0;
+	audioFail.pause();
+	audioFail.currentTime = 0;
 	//change colors of squares
 	for(var i = 0; i < squares.length; i++){
 		squares[i].style.backgroundColor = colors[i];
